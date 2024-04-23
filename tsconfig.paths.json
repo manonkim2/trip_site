@@ -6,7 +6,9 @@
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
       "@shared/*": ["src/components/shared/*"],
-      "@pages/*": ["src/pages/*"]
+      "@pages/*": ["src/pages/*"],
+      "@remote/*": ["src/remote/*"],
+      "@constants/*": ["src/constants/*"]
     }
   }
 }
