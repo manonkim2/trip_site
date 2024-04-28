@@ -1,4 +1,4 @@
-export interface Hotel {
+export interface IHotel {
   comment: string
   contents: string
   id: string

@@ -3,15 +3,16 @@ import { useCallback } from 'react'
 import { useInfiniteQuery } from 'react-query'
 
 const useHotels = () => {
-  const { data, hasNextPage, isFetching, fetchNextPage } = useInfiniteQuery(
-    ['hotels'],
-    ({ pageParam }) => getHotels(pageParam),
-    {
-      getNextPageParam: (snapshot) => {
-        return snapshot.lastVisible
-      },
+  const {
+    data,
+    hasNextPage = false,
+    isFetching,
+    fetchNextPage,
+  } = useInfiniteQuery(['hotels'], ({ pageParam }) => getHotels(pageParam), {
+    getNextPageParam: (snapshot) => {
+      return snapshot.lastVisible
     },
-  )
+  })
 
   const loadMore = useCallback(() => {
     if (hasNextPage === false || isFetching) {

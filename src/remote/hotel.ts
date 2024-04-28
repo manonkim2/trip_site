@@ -1,5 +1,5 @@
 import { COLLECTIONS } from '@/constants'
-import { Hotel } from '@/models/hotel'
+import { IHotel } from '@/models/hotel'
 import {
   collection,
   getDocs,
@@ -10,7 +10,7 @@ import {
 } from 'firebase/firestore'
 import { store } from './firebase'
 
-const getHotels = async (pageParams?: QuerySnapshot<Hotel>) => {
+const getHotels = async (pageParams?: QuerySnapshot<IHotel>) => {
   const hotelsQuery =
     pageParams == null
       ? query(collection(store, COLLECTIONS.HOTEL), limit(10))
@@ -27,7 +27,7 @@ const getHotels = async (pageParams?: QuerySnapshot<Hotel>) => {
       ({
         id: doc.id,
         ...doc.data(),
-      }) as Hotel,
+      }) as IHotel,
   )
 
   const lastVisible = hotelSnapshot.docs[hotelSnapshot.docs.length - 1]
