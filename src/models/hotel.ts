@@ -8,4 +8,12 @@ export interface IHotel {
   name: string
   price: number
   starRating: number
+  events?: {
+    promoEndTime?: string
+    name: string
+    tagThemeStyle: {
+      backgroundColor: string
+      fontColor: string
+    }
+  }
 }
