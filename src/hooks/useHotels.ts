@@ -1,4 +1,4 @@
-import getHotels from '@/remote/hotel'
+import { getHotels } from '@/remote/hotel'
 import { useCallback } from 'react'
 import { useInfiniteQuery } from 'react-query'
 
