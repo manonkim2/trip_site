@@ -27,8 +27,6 @@ const HotelItem = ({ hotel }: { hotel: IHotel }) => {
         new Date(),
       )
 
-      console.log(remainSec)
-
       if (remainSec < 0) {
         clearInterval(timer)
         return

@@ -1,4 +1,5 @@
 import Carousel from '@/components/Hotel/Carousel'
+import Contents from '@/components/Hotel/Contents'
 import useHotel from '@/components/Hotel/hooks/useHotel'
 import Top from '@/components/shared/Top'
 import { useParams } from 'react-router-dom'
@@ -12,12 +13,13 @@ const HotelPage = () => {
     return <div>Loading</div>
   }
 
-  const { name, comment, images } = data
+  const { name, comment, images, contents } = data
 
   return (
     <div>
       <Top title={name} subTitle={comment} />
       <Carousel images={images} />
+      <Contents contents={contents} />
     </div>
   )
 }
