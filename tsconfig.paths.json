@@ -9,6 +9,8 @@
       "@pages/*": ["src/pages/*"],
       "@remote/*": ["src/remote/*"],
       "@constants/*": ["src/constants/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@models/*": ["src/models/*"]
     }
   }

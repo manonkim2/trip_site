@@ -1,3 +1,4 @@
+import ActionButtons from '@/components/Hotel/ActionButtons'
 import Carousel from '@/components/Hotel/Carousel'
 import Contents from '@/components/Hotel/Contents'
 import useHotel from '@/components/Hotel/hooks/useHotel'
@@ -22,6 +23,7 @@ const HotelPage = () => {
     <div>
       <Top title={name} subTitle={comment} />
       <Carousel images={images} />
+      <ActionButtons hotel={data} />
       <Rooms hotelId={id} />
       <Contents contents={contents} />
       <Map location={location} />
