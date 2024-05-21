@@ -12,7 +12,8 @@
       "@utils/*": ["src/utils/*"],
       "@hooks/*": ["src/hooks/*"],
       "@models/*": ["src/models/*"],
-      "@store/*": ["src/store/*"]
+      "@store/*": ["src/store/*"],
+      "@auth/*": ["src/auth/*"]
     }
   }
 }
