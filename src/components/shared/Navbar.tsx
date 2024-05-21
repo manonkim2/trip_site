@@ -1,3 +1,4 @@
+import useUser from '@/hooks/useUser'
 import { colors } from '@/styles/colorPalette'
 import { css } from '@emotion/react'
 import React, { useCallback } from 'react'
@@ -8,26 +9,39 @@ import Flex from './Flex'
 
 const Navbar = () => {
   const location = useLocation()
-  // const user = useUser()
+  const user = useUser()
 
   const showSignButton =
     ['/signup', '/signin'].includes(location.pathname) === false
 
   const renderButton = useCallback(() => {
-    // if (user != null) {
-    //   return <Link to="/my">{/* <MyImage size={40} /> */}</Link>
-    // }
+    if (user != null) {
+      return (
+        <Link to="/my">
+          <img
+            src={
+              user.photoURL ??
+              'https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-128.png'
+            }
+            alt="유저의 이미지"
+            width={36}
+            height={36}
+            style={{ borderRadius: '100%' }}
+          />
+        </Link>
+      )
+    }
 
     if (showSignButton) {
       return (
         <Link to="signin">
-          <Button>로그인 / 회원가입</Button>
+          <Button weak>로그인 / 회원가입</Button>
         </Link>
       )
     }
 
     return null
-  }, [showSignButton])
+  }, [showSignButton, user])
 
   return (
     <Flex
@@ -35,7 +49,7 @@ const Navbar = () => {
       align={'center'}
       css={navbarContainerStyles}
     >
-      <Link to="/">홈</Link>
+      <Link to="/">Trip</Link>
       {renderButton()}
     </Flex>
   )
@@ -48,7 +62,7 @@ const navbarContainerStyles = css`
   top: 0;
   background-color: ${colors.white};
   z-index: 10;
-  border-bottom: 1px solid ${colors.gray};
+  border-bottom: 1px solid ${colors.gray200};
 `
 
 export default Navbar

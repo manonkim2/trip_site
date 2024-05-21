@@ -59,6 +59,7 @@ const RAW_RUNTIME_STATE =
           ["react-query", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:3.39.3"],\
           ["react-router-dom", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:6.22.3"],\
           ["react-scripts", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:5.0.1"],\
+          ["recoil", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:0.7.7"],\
           ["swiper", "npm:11.1.1"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
           ["web-vitals", "npm:2.1.4"]\
@@ -11987,6 +11988,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["hamt_plus", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../.yarn/berry/cache/hamt_plus-npm-1.0.2-67a52ee1df-10c0.zip/node_modules/hamt_plus/",\
+        "packageDependencies": [\
+          ["hamt_plus", "npm:1.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["handle-thing", [\
       ["npm:2.0.1", {\
         "packageLocation": "../../.yarn/berry/cache/handle-thing-npm-2.0.1-084baca59e-10c0.zip/node_modules/handle-thing/",\
@@ -18402,6 +18412,37 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["recoil", [\
+      ["npm:0.7.7", {\
+        "packageLocation": "../../.yarn/berry/cache/recoil-npm-0.7.7-4452f58b67-10c0.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "npm:0.7.7"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:0.7.7", {\
+        "packageLocation": "./.yarn/__virtual__/recoil-virtual-cdf552fa57/3/.yarn/berry/cache/recoil-npm-0.7.7-4452f58b67-10c0.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:0.7.7"],\
+          ["@types/react", "npm:18.2.79"],\
+          ["@types/react-dom", "npm:18.2.25"],\
+          ["@types/react-native", null],\
+          ["hamt_plus", "npm:1.0.2"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:18.2.0"],\
+          ["react-native", null]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react-native",\
+          "@types/react",\
+          "react-dom",\
+          "react-native",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["recursive-readdir", [\
       ["npm:2.2.3", {\
         "packageLocation": "../../.yarn/berry/cache/recursive-readdir-npm-2.2.3-3f177ebd90-10c0.zip/node_modules/recursive-readdir/",\
@@ -20236,6 +20277,7 @@ const RAW_RUNTIME_STATE =
           ["react-query", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:3.39.3"],\
           ["react-router-dom", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:6.22.3"],\
           ["react-scripts", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:5.0.1"],\
+          ["recoil", "virtual:9463cfac29dcd98a88e9dc8cfe84fc7c8427896f9fe070a231b558b962b044406222fd9e4e4628f5515ee6e3d07b5ed819f92be98a62e822da3f492cb3455745#npm:0.7.7"],\
           ["swiper", "npm:11.1.1"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
           ["web-vitals", "npm:2.1.4"]\
