@@ -12,8 +12,8 @@ const HotelListPage = lazy(() => import('@pages/HotelList'))
 const HotelPage = lazy(() => import('@pages/Hotel'))
 const Mypage = lazy(() => import('@pages/My'))
 const SigninPage = lazy(() => import('@pages/Signin'))
-const SettingsPage = lazy(() => import('@/pages/Setting'))
-const LikePage = lazy(() => import('@/pages/Setting/like'))
+const SettingsPage = lazy(() => import('@/pages/setting'))
+const LikePage = lazy(() => import('@/pages/setting/like'))
 
 function App() {
   useLoadKakao()
