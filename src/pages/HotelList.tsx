@@ -5,6 +5,7 @@ import useHotels from '@/hooks/useHotels'
 import { Fragment } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import useLike from '@hooks/like/useLike'
+import withSuspense from '@/components/shared/hocs/withSuspense'
 
 const HotelListPage = () => {
   const { data: hotels, hasNextPage, loadMore } = useHotels()
@@ -42,4 +43,6 @@ const HotelListPage = () => {
   )
 }
 
-export default HotelListPage
+export default withSuspense(HotelListPage, {
+  fallback: <div>호텔리스트 불러오는중..........</div>,
+})

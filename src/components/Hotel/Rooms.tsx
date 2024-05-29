@@ -4,6 +4,7 @@ import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 import Button from '../shared/Button'
 import Flex from '../shared/Flex'
+import withSuspense from '../shared/hocs/withSuspense'
 import ListRow from '../shared/ListRow'
 import Spacing from '../shared/Spacing'
 import Tag from '../shared/Tag'
@@ -79,4 +80,6 @@ const imagesStyle = css`
   border-radius: 4px;
 `
 
-export default Rooms
+export default withSuspense(Rooms, {
+  fallback: <div>룸 불러오는중........</div>,
+})
