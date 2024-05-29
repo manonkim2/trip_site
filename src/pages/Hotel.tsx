@@ -6,7 +6,9 @@ import Map from '@/components/Hotel/Map'
 import RecommendHotels from '@/components/Hotel/RecommendHotels'
 import Review from '@/components/Hotel/Review'
 import Rooms from '@/components/Hotel/Rooms'
+import ScrollProgressBar from '@/components/shared/ScrollProgressBar'
 import Top from '@/components/shared/Top'
+import { css } from '@emotion/react'
 import { useParams } from 'react-router-dom'
 
 const HotelPage = () => {
@@ -22,6 +24,7 @@ const HotelPage = () => {
 
   return (
     <div>
+      <ScrollProgressBar style={scrollProgressBarStyles} />
       <Top title={name} subTitle={comment} />
       <Carousel images={images} />
       <ActionButtons hotel={data} />
@@ -33,5 +36,11 @@ const HotelPage = () => {
     </div>
   )
 }
+
+const scrollProgressBarStyles = css`
+  position: sticky;
+  top: 48px;
+  z-index: 2;
+`
 
 export default HotelPage
