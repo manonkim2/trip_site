@@ -2,6 +2,7 @@ import { css } from '@emotion/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const Carousel = ({ images }: { images: string[] }) => {
   return (
@@ -9,10 +10,11 @@ const Carousel = ({ images }: { images: string[] }) => {
       <Swiper spaceBetween={8} css={containerStyles}>
         {images.map((imageUrl, idx) => (
           <SwiperSlide key={imageUrl}>
-            <img
+            <LazyLoadImage
               src={imageUrl}
               alt={`${idx + 1}번째 호텔 이미지`}
               css={imageStyles}
+              height={300}
             />
           </SwiperSlide>
         ))}
