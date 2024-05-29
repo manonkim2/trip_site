@@ -6,6 +6,7 @@ import Navbar from './components/shared/Navbar'
 import AuthGuard from './components/auth/AuthGuard'
 import PrivateRoute from './components/auth/PrivateRoute'
 import useLoadKakao from './hooks/useLoadKakao'
+import { HelmetProvider } from 'react-helmet-async'
 
 const TestPage = lazy(() => import('@pages/Test'))
 const HotelListPage = lazy(() => import('@pages/HotelList'))
@@ -20,41 +21,43 @@ function App() {
 
   return (
     <Suspense fallback={<></>}>
-      <BrowserRouter>
-        <AuthGuard>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<HotelListPage />}></Route>
-            <Route path="/test" element={<TestPage />}></Route>
-            <Route
-              path="/mypage"
-              element={
-                <PrivateRoute>
-                  <Mypage />
-                </PrivateRoute>
-              }
-            ></Route>
-            <Route path="/signin" element={<SigninPage />}></Route>
-            <Route path="/hotel/:id" element={<HotelPage />}></Route>
-            <Route
-              path="/settings"
-              element={
-                <PrivateRoute>
-                  <SettingsPage />
-                </PrivateRoute>
-              }
-            ></Route>
-            <Route
-              path="/settings/like"
-              element={
-                <PrivateRoute>
-                  <LikePage />
-                </PrivateRoute>
-              }
-            />
-          </Routes>
-        </AuthGuard>
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <AuthGuard>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<HotelListPage />}></Route>
+              <Route path="/test" element={<TestPage />}></Route>
+              <Route
+                path="/mypage"
+                element={
+                  <PrivateRoute>
+                    <Mypage />
+                  </PrivateRoute>
+                }
+              ></Route>
+              <Route path="/signin" element={<SigninPage />}></Route>
+              <Route path="/hotel/:id" element={<HotelPage />}></Route>
+              <Route
+                path="/settings"
+                element={
+                  <PrivateRoute>
+                    <SettingsPage />
+                  </PrivateRoute>
+                }
+              ></Route>
+              <Route
+                path="/settings/like"
+                element={
+                  <PrivateRoute>
+                    <LikePage />
+                  </PrivateRoute>
+                }
+              />
+            </Routes>
+          </AuthGuard>
+        </BrowserRouter>
+      </HelmetProvider>
     </Suspense>
   )
 }
